@@ -36,6 +36,7 @@ You can click here to see the [`example.pdf`](https://github.com/sonnyhcl/beamer
 - [x] algorithm
 - [x] code
 - [x] tikz
+- [x] equation
 - [ ] foot cite
 
 ## TODO
