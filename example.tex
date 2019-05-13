@@ -13,16 +13,17 @@
 \bibliographystyle{dinat} % set bib style
 \setbeamercovered{transparent} % shadow words for overlay
 \usepackage{listings}
+\usepackage{xeCJK} % CJK package for xelatex
+\setCJKmainfont{SimHei} % use SimHei as main font <- need preinstall SimHei
 
 %%% Titlepage information
 \title[Short Title]{Long Title Here}
 \author[Presenter Name]{\textbf{Presenter Name} \and Author2 \and Author3}
 \institute[Fudan University]{
-    % 以计算机学院为例，要写三个单位
     School of Computer Science, Fudan University, Shanghai, China \\
     Shanghai Key Laboratory of Data Science, Shanghai, China \\
     Shanghai Institute of Intelligent Electronics \& Systems \\~\\
-    % 致谢基金
+    % Thanks funding here
     \tiny{This work is partially supported by xxx}
 }
 
@@ -46,7 +47,8 @@
 
 \section{SectionName}
 \begin{frame}{Frame title here (optional)}{Frame subtitle here (also optional)}
-  whatever you want to say
+  whatever you want to say\\
+  中文支持ok
 \end{frame}
 
 \section{Examples}
