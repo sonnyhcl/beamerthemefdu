@@ -1,30 +1,20 @@
 \documentclass{beamer}
 \usetheme{fdu}
 
-%%% 扩展包
-% 图文说明文字
-\usepackage{caption}
-% 画图
-\usepackage{tikz}
-\usepackage{pgfplots}
+%%% Packages
+\usepackage{tikz} % plot in place
+\usepackage{pgfplots} % rather include jpg/pdf
 \pgfplotsset{compat=1.9}
-% 表格对角线
-\usepackage{diagbox}
-% 算法伪代码
+\usepackage{diagbox} % diagbox for table
+\usepackage[export]{adjustbox} % autofix for table
 \usepackage[ruled]{algorithm2e}
-\SetKwProg{Fn}{Function}{}{end}
-\SetAlCapFnt{\tiny\sffamily}
-% 引用
-% \usepackage[square,sort,comma,numbers]{natbib}
-\usepackage[round]{natbib}
-\bibliographystyle{dinat}
-% 图片定位辅助
-\usepackage[export]{adjustbox}
-% 设置beamer动画样式
-\setbeamercovered{transparent}
+\SetAlCapFnt{\tiny\sffamily} % setting fonts for algorithm caption
+\usepackage[round]{natbib} % bib cite package
+\bibliographystyle{dinat} % set bib style
+\setbeamercovered{transparent} % shadow words for overlay
 \usepackage{listings}
 
-%%% Title information
+%%% Titlepage information
 \title[Short Title]{Long Title Here}
 \author[Presenter Name]{\textbf{Presenter Name} \and Author2 \and Author3}
 \institute[Fudan University]{
@@ -60,7 +50,6 @@
 \end{frame}
 
 \section{Examples}
-
 \subsection{itemize}
 \begin{frame}[t]{itemize}
   The main contribution of our work is to propose a xxxx
@@ -106,7 +95,7 @@
 \subsection{images}
 \begin{frame}[t]{images}
   \centering
-  \includegraphics[width=0.75\textwidth]{resources/placeholder1}
+  \includegraphics[width=\textwidth]{resources/placeholder1}
 \end{frame}
 
 \subsection{animation}
@@ -141,7 +130,7 @@
     \item First you need to put all your reference into the bib file like reference.bib
     \item Then you can cite like this Author (year) -> \cite{jia2014caffe}
     \item footnote cite seems not good...If you find better way to call footnote, please issue for me.
-    \item \footnote{\citealp*{jia2014caffe}}
+    \item footnote \footnote{\citep*{jia2014caffe}}
   \end{itemize}
 \end{frame}
 
@@ -155,7 +144,7 @@
 \subsection{equation}
 \begin{frame}{equation}
   \begin{equation}
-  \Sigma + \epsilon + \alpha + \beta + \Theta
+    \Sigma + \epsilon + \alpha + \beta + \Theta
   \end{equation}
 \end{frame}
 
@@ -239,11 +228,8 @@
         \addlegendentry{\tiny{F-1500}}
       \end{axis}
     \end{tikzpicture}
+    \caption{place some explanation here}
   \end{figure}
-
-  \begin{center}
-    place some explanation here
-  \end{center}
 \end{frame}
 
 \section{Q\&A}
